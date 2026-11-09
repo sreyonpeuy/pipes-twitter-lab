@@ -476,11 +476,11 @@ so it's fine if the text appears inside of a hashtag.
 > Edit the code block below with your command and its output
 > ```
 > $ unzip -p '/data/Twitter dataset/geoTwitter20-03-12.zip' | jq -r 'select(.place.full_name == "Claremont, CA") | .text' | grep -i "coronavirus"
-> Ready to battle Coronavirus. 😤😤😤 https://t.co/DXrh3suIOH
-The class of 2020 started their college career w/ the Trump election and will end it with a pandemic. #coronavirus #COVID2019
-No not Coronavirus cuz it isn’t airborne.
-When my coworker was calmly telling me how her son looked up conspiracy theories about Coronavirus https://t.co/ECLv7xsR0z
-Rare W from the juice. #CoronavirusPandemic
+> Ready to battle Coronavirus. 😤😤😤 [https://t.co/DXrh3suIOH](https://t.co/DXrh3suIOH)
+> The class of 2020 started their college career w/ the Trump election and will end it with a pandemic. #coronavirus #COVID2019
+> No not Coronavirus cuz it isn’t airborne.
+> When my coworker was calmly telling me how her son looked up conspiracy theories about Coronavirus [https://t.co/ECLv7xsR0z](https://t.co/ECLv7xsR0z)
+> Rare W from the juice. #CoronavirusPandemic
 > ```
 
 ## Submission
