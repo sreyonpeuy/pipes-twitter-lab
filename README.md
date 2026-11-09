@@ -429,10 +429,18 @@ Notice that many of these tweets are in non-English languages.
 > Write a one line shell command that returns the name of the location that the first 10 tweets were sent from on 1 April 2020.
 > Edit the code block below with your command and its output
 > ```
-> $ #place command here
-> place output here
+> $ unzip -p '/data/Twitter dataset/geoTwitter20-04-01.zip' | head -n10 | jq '.place.full_name'
+> "San José, Costa Rica"
+> "Phoenix, AZ"
+> "Cibitung, Indonesia"
+> null
+> "Brasília, Brasil"
+> null
+> "São Paulo, Brasil"
+> "Riyadh, Kingdom of Saudi Arabia"
+> "Queens, NY"
+> "Dorsten, Deutschland"
 > ```
-
 # Part 5: Interesting queries
 
 We're now ready to perform some rather interesting queries on our dataset.
@@ -467,8 +475,12 @@ so it's fine if the text appears inside of a hashtag.
 > (This was the last day of in-person classes that semester.)
 > Edit the code block below with your command and its output
 > ```
-> $ #place command here
-> place output here
+> $ unzip -p '/data/Twitter dataset/geoTwitter20-03-12.zip' | jq -r 'select(.place.full_name == "Claremont, CA") | .text' | grep -i "coronavirus"
+> Ready to battle Coronavirus. 😤😤😤 https://t.co/DXrh3suIOH
+The class of 2020 started their college career w/ the Trump election and will end it with a pandemic. #coronavirus #COVID2019
+No not Coronavirus cuz it isn’t airborne.
+When my coworker was calmly telling me how her son looked up conspiracy theories about Coronavirus https://t.co/ECLv7xsR0z
+Rare W from the juice. #CoronavirusPandemic
 > ```
 
 ## Submission
